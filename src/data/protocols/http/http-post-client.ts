@@ -1,14 +1,14 @@
 import { HttpResponse } from './http-response'
 
-export type HttpPostParams = {
+export type HttpPostParams<T> = {
   url: string
-  body?: object
+  body?: T
 }
 
 /**
  * Abstração de Produção responsável pelo Post do HttpClient
  * Respeita o padrão do Interface Segregation Principle
  */
-export interface HttpPostClient {
-  post: (params: HttpPostParams) => Promise<HttpResponse>
+export interface HttpPostClient<T, R> {
+  post: (params: HttpPostParams<T>) => Promise<HttpResponse<R>>
 }
