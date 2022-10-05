@@ -1,3 +1,5 @@
+import { HttpResponse } from './http-response'
+
 export type HttpPostParams = {
   url: string
   body?: object
@@ -8,5 +10,5 @@ export type HttpPostParams = {
  * Respeita o padrão do Interface Segregation Principle
  */
 export interface HttpPostClient {
-  post: (params: HttpPostParams) => Promise<void>
+  post: (params: HttpPostParams) => Promise<HttpResponse>
 }
