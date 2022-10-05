@@ -10,6 +10,7 @@
     "test:ci": "yarn test --coverage"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "@types/jest": "^29.1.1",
     "@types/node": "^18.8.2",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
