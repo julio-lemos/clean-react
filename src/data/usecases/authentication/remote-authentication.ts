@@ -1,5 +1,6 @@
 import { HttpPostClient } from 'data/protocols/http/http-post-client'
 
+/** Classe de produção responsável por se conectar a API de Authenticação  */
 export class RemoteAuthentication {
   constructor (
     private readonly url: string,
